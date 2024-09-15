@@ -76,6 +76,10 @@ def main():
 def projects():
     return render_template('projects.html')
 
+@app.route('/aipage')
+def aipage():
+    return render_template('aihome.html')
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html')  
