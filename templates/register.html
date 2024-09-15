@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form  id="login-auth" action="/register" method="POST"> 
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="login-btn">Register</button>
+            <div class="extra-options">
+                <a href="{{ url_for('forgotpass') }}" class="forgot-password">Forgot Password?</a>
+                <div class="sign-up">
+                    <span>Don't have an account?</span>
+                    <a href="{{ url_for('register') }}">Sign Up</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
